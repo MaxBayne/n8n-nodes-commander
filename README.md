@@ -1,46 +1,97 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+![Banner image](assets/image-banner.png)
 
-# n8n-nodes-starter
+# n8n-nodes-commander
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+This is an n8n community node. It lets you use child_process in your n8n workflows so you can execute any command with or without cmd window like silent mode
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
 
-## Prerequisites
+[Installation](#installation)  
+[Compatibility](#compatibility)  
+[Usage](#usage)
+[Resources](#resources)  
+[License](#license)  
 
-You need the following installed on your development machine:
 
-* [git](https://git-scm.com/downloads)
-* Node.js and pnpm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+## Installation
 
-## Using this starter
+**For NPM**
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+To install the node locally, navigate to your n8n installation directory and run the following command:
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm lint` to check for errors or `npm lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+```
+npm install --save n8n-nodes-commander
+```
 
-## More information
+**For Docker**
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+To install the node using Docker, add the following line to the services block in your docker-compose.yml file:
+```
+
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - ./n8n:/root/.n8n
+    environment:
+      N8N_CUSTOM_NODES: '["n8n-nodes-commander"]'
+
+```
+
+**For n8n UI**
+
+1. Open your n8n instance in a web browser.
+2. Click on "Settings" in the left-hand navigation panel.
+![settings](assets\image-0.png)
+
+3. Click on "Community nodes" in the left-hand navigation panel.
+![community nodes](assets\image-1.png)
+
+4. Click on the "Install a community node" button.
+![install](assets\image-2.png)
+
+5. Fill in the name of the node: "n8n-nodes-commander". and then "Install"
+![fill-package](assets\image-3.png)
+
+## Credentials
+
+- No credentials required
+
+## Compatibility
+
+- Tested with version 1.94.1
+
+## Usage
+
+1. Open your workflow
+2. Open Nodes Panel or press "Tab" then type "Commander" like below
+![alt text](assets\image-4.png)
+
+3. Select or Drag the "Execute Commander" on Canvas area
+
+4. Open Node for Configuration
+
+	- Execution Once : Just Execute Command Once Over All Inputs , otherwise Repeat Execution with Every input item
+	- Hidden Window : Just Hide CMD Window for Silent mode (Only Windows OS)
+
+	- Execution Mode : 
+  		* Exec : For Simple Output
+		* Spawn : For Large Output with continuous Output like logs or monitor stats
+
+	- Command : your command code block like `echo "Welcome To Egypt"`
+
+5. Example
+
+	![alt text](assets\image-7.png)
+
+	![alt text](assets\image-5.png)
+
+	![alt text](assets\image-6.png)
+
+## Resources
+
+* [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes)
+* [n8n-nodes-commander on npmjs](https://www.npmjs.com/package/n8n-nodes-commander)
 
 ## License
-
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+* This project is licensed under the [MIT License]
