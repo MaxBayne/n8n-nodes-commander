@@ -1,4 +1,4 @@
-![Banner image](assets/image-banner.png)
+![image-banner](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-banner.png)
 
 
 # n8n-nodes-commander
@@ -44,16 +44,17 @@ i try to write markdown readme file that contain this below , my issue the image
 1. Open your n8n instance in a web browser.
 2. Click on "Settings" in the left-hand navigation panel.
 
-	![settings](assets\image-0.png)
+
+	![image-0](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-0.png)
 3. Click on "Community nodes" in the left-hand navigation panel.
 
-	![community nodes](assets\image-1.png)
+	![image-1](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-1.png)
 4. Click on the "Install a community node" button.
 	
-	![install](assets\image-2.png)
+	![image-2](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-2.png)
 5. Fill in the name of the node: "n8n-nodes-commander". and then "Install"
 	
-	![fill-package](assets\image-3.png)
+	![image-3](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-3.png)
 
 
 ## Credentials
@@ -69,7 +70,7 @@ i try to write markdown readme file that contain this below , my issue the image
 1. Open your workflow
 2. Open Nodes Panel or press "Tab" then type "Commander" like below
 
-	![alt text](assets\image-4.png)
+	![image-4](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-4.png)
 
 3. Select or Drag the "Execute Commander" on Canvas area
 
@@ -86,11 +87,11 @@ i try to write markdown readme file that contain this below , my issue the image
 
 5. Example
 
-	![alt text](assets\image-7.png)
+	![image-7](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-7.png)
 
-	![alt text](assets\image-5.png)
+	![image-5](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-5.png)
 
-	![alt text](assets\image-6.png)
+	![image-6](https://github.com/MaxBayne/n8n-nodes-commander/blob/master/assets/image-6.png)
 
 ## Resources
 
