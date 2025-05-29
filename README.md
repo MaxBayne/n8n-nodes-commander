@@ -1,5 +1,6 @@
 ![Banner image](assets/image-banner.png)
 
+
 # n8n-nodes-commander
 
 This is an n8n community node. It lets you use child_process in your n8n workflows so you can execute any command with or without cmd window like silent mode
@@ -37,21 +38,23 @@ To install the node using Docker, add the following line to the services block i
       N8N_CUSTOM_NODES: '["n8n-nodes-commander"]'
 
 ```
-
+i try to write markdown readme file that contain this below , my issue the images i need it align to left
 **For n8n UI**
 
 1. Open your n8n instance in a web browser.
 2. Click on "Settings" in the left-hand navigation panel.
-![settings](assets\image-0.png)
 
+	![settings](assets\image-0.png)
 3. Click on "Community nodes" in the left-hand navigation panel.
-![community nodes](assets\image-1.png)
 
+	![community nodes](assets\image-1.png)
 4. Click on the "Install a community node" button.
-![install](assets\image-2.png)
-
+	
+	![install](assets\image-2.png)
 5. Fill in the name of the node: "n8n-nodes-commander". and then "Install"
-![fill-package](assets\image-3.png)
+	
+	![fill-package](assets\image-3.png)
+
 
 ## Credentials
 
@@ -65,7 +68,8 @@ To install the node using Docker, add the following line to the services block i
 
 1. Open your workflow
 2. Open Nodes Panel or press "Tab" then type "Commander" like below
-![alt text](assets\image-4.png)
+
+	![alt text](assets\image-4.png)
 
 3. Select or Drag the "Execute Commander" on Canvas area
 
